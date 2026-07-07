@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CIT 173 Linux+ Master Resource Crosswalk</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="eyebrow">CIT 173 Introduction to Linux</p>
+      <h1>CompTIA Linux+ XK0-006 Master Resource Crosswalk</h1>
+      <p class="lede">Blum textbook chapters are the primary course spine. Total Seminars videos, optional Red Hat Academy readings, guided exercises, labs, and CIT 173 outcomes are aligned to each chapter.</p>
+      <div class="status-strip" aria-label="Course planning rules">
+        <span>First week: access and orientation only</span>
+        <span>16-week final week: finals only</span>
+        <span>8- and 10-week final week: finals plus required review work</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="tab-nav" aria-label="Main sections">
+    <button class="tab-button active" type="button" data-tab="overview" aria-controls="overview" aria-pressed="true">Overview</button>
+    <button class="tab-button" type="button" data-tab="outcomes" aria-controls="outcomes" aria-pressed="false">Outcomes</button>
+    <button class="tab-button" type="button" data-tab="crosswalk" aria-controls="crosswalk" aria-pressed="false">Crosswalk</button>
+    <button class="tab-button" type="button" data-tab="semester" aria-controls="semester" aria-pressed="false">Semester Maps</button>
+    <button class="tab-button" type="button" data-tab="practice" aria-controls="practice" aria-pressed="false">Practice Planner</button>
+  </nav>
+
+  <main id="main">
+    <section id="overview" class="tab-panel active" tabindex="-1">
+      <div class="panel-grid">
+        <article class="info-panel">
+          <h2>Resource Priority</h2>
+          <ol class="priority-list">
+            <li><strong>Blum textbook:</strong> required primary outline, Parts I-VII and Chapters 1-31.</li>
+            <li><strong>Total Seminars:</strong> aligned videos, tutorials, and demos.</li>
+            <li><strong>Red Hat Academy:</strong> optional reading and reinforcement from RH104, RH124, and RH134.</li>
+            <li><strong>Practice:</strong> Blum exercises, Total Seminars demos, Red Hat guided exercises, and Red Hat lab candidates.</li>
+          </ol>
+        </article>
+        <article class="info-panel progress-panel">
+          <h2>SCORM Progress</h2>
+          <p>Use the checkboxes in the crosswalk to track reviewed resource bundles. In an LMS, progress is reported to SCORM when available.</p>
+          <div class="meter-wrap" aria-label="Completion progress">
+            <div class="meter">
+              <span id="progressBar"></span>
+            </div>
+            <p id="progressText" class="meter-text">0 of 31 bundles reviewed</p>
+          </div>
+          <button id="resetProgress" class="secondary-button" type="button">Reset progress</button>
+        </article>
+      </div>
+
+      <section class="callout" aria-labelledby="catalog-heading">
+        <h2 id="catalog-heading">Catalog Alignment</h2>
+        <p>CIT 173 is a 3-credit Introduction to Linux course. The course description covers Linux origins, file systems, user commands and utilities, graphical interfaces, editors, manual pages, and shells. The six catalog learning outcomes are used as tags throughout this crosswalk.</p>
+      </section>
+    </section>
+
+    <section id="outcomes" class="tab-panel" tabindex="-1" hidden>
+      <div class="section-heading">
+        <h2>CIT 173 Learning Outcomes</h2>
+        <p>Each textbook chapter, video bundle, optional Red Hat reading, and lab bundle is mapped to one or more outcomes.</p>
+      </div>
+      <div id="outcomeGrid" class="outcome-grid"></div>
+    </section>
+
+    <section id="crosswalk" class="tab-panel" tabindex="-1" hidden>
+      <div class="section-heading">
+        <h2>Master Crosswalk</h2>
+        <p>Filter by outcome, scope, or keyword. The chapter cards preserve the Blum textbook order.</p>
+      </div>
+      <div class="filters" aria-label="Crosswalk filters">
+        <label>
+          Search resources
+          <input id="searchBox" type="search" placeholder="Try networking, permissions, RH134, 8.5">
+        </label>
+        <label>
+          Outcome
+          <select id="outcomeFilter">
+            <option value="all">All outcomes</option>
+          </select>
+        </label>
+        <label>
+          Scope
+          <select id="scopeFilter">
+            <option value="all">All scope levels</option>
+            <option value="Core">Core CIT 173</option>
+            <option value="Extend">Linux+ extension</option>
+          </select>
+        </label>
+      </div>
+      <p id="resultCount" class="result-count" aria-live="polite"></p>
+      <div id="crosswalkList" class="card-list"></div>
+    </section>
+
+    <section id="semester" class="tab-panel" tabindex="-1" hidden>
+      <div class="section-heading">
+        <h2>Semester Course Maps</h2>
+        <p>Choose the schedule length. Week 1 is always access and orientation only.</p>
+      </div>
+      <div class="schedule-controls" role="group" aria-label="Semester length">
+        <button class="schedule-button active" type="button" data-schedule="16" aria-pressed="true">16 weeks</button>
+        <button class="schedule-button" type="button" data-schedule="10" aria-pressed="false">10 weeks</button>
+        <button class="schedule-button" type="button" data-schedule="8" aria-pressed="false">8 weeks</button>
+      </div>
+      <div id="scheduleList" class="week-list"></div>
+    </section>
+
+    <section id="practice" class="tab-panel" tabindex="-1" hidden>
+      <div class="section-heading">
+        <h2>Practice Planner</h2>
+        <p>Use these aligned activities to choose required labs, optional practice, review labs, and capstone preparation.</p>
+      </div>
+      <div id="practiceList" class="practice-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Prepared as a course planning aid for CIT 173 and CompTIA Linux+ XK0-006. Source numbering is preserved for classroom use.</p>
+  </footer>
+
+  <noscript>
+    <p class="noscript">This interactive crosswalk requires JavaScript. The SCORM package also includes a Markdown master guide for non-interactive review.</p>
+  </noscript>
+
+  <script src="scorm_api.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
