@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="CIT173_LINUXPLUS_MASTER_CROSSWALK"
+  version="1.0"
+  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                      http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+  <organizations default="ORG_CIT173">
+    <organization identifier="ORG_CIT173">
+      <title>CIT 173 and Linux+ XK0-006 Master Resource Crosswalk</title>
+      <item identifier="ITEM_CROSSWALK" identifierref="RES_CROSSWALK" isvisible="true">
+        <title>Master Resource Crosswalk</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES_CROSSWALK" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html" />
+      <file href="styles.css" />
+      <file href="app.js" />
+      <file href="scorm_api.js" />
+      <file href="master_crosswalk.md" />
+      <file href="README.md" />
+    </resource>
+  </resources>
+</manifest>
